@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <button class="nav-tab active" onclick="showHome()">Home</button>
+            <button class="nav-tab" onclick="showResume()">Resume</button>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+    <div class="container" id="home-content">
+        <section class="hero">
+            <h1>Joey Ong (王艺庭)</h1>
+            <p>Data Engineer | 6+ years working with data</p>
+            <div class="social-links">
+                <a href="https://github.com/joaye" class="social-icon">GitHub</a>
+                <a href="mailto:ms.joeyongyt@gmail.com" class="social-icon">Email</a>
+                <a href="https://www.linkedin.com/in/joey-ong-416753119/" class="social-icon">LinkedIn</a>
+            </div>
+            <p>Hi there, I value adaptability and keeping things simple.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-tabs">
+                <button class="skills-tab active" onclick="showSkills('soft')">Soft</button>
+                <button class="skills-tab" onclick="showSkills('technical')">Technical</button>
+                <button class="skills-tab" onclick="showSkills('stack')">Stack</button>
+            </div>
+            <div class="skills-content">
+                <div id="soft-skills" class="skills-section active">
+                    <div class="skill-item">
+                        <h4>Cross-Functional Collaboration</h4>
+                        <p>Team player who contributes individually while driving collective success.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Analytical and Problem Solving Skills</h4>
+                        <p>Proactive in approaching challenges to break down and deliver resolutions.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>>Continuous Learning</h4>
+                        <p>Actively explore new tools, ideas, and technologies.</p>
+                    </div>
+                </div>
+                <div id="technical-skills" class="skills-section">
+                    <div class="skill-item">
+                        <h4>Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">NextJS</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Data Management</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ETL/ELT</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Data Integration</span>
+                            <span class="skill-tag">Data Mining</span>
+                            <span class="skill-tag">Data Orchestration</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Data Warehouse</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Postgres</span>
+                            <span class="skill-tag">Snowflake</span>
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Hive</span>
+                            <span class="skill-tag">Pyspark</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>AI</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Predictive Modelling</span>
+                            <span class="skill-tag">Feature Engineering</span>
+                            <span class="skill-tag">Generative AI</span>
+                            <span class="skill-tag">Topic Modelling</span>
+                            <span class="skill-tag">Context Engineering</span>
+                            <span class="skill-tag">NER</span>
+                            <span class="skill-tag">Knowledge Graph</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Cloud Infrastructure</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="stack-skills" class="skills-section">
+                    <div class="skill-item">
+                        <h4>Analytics & BI</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Elastic Search</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Integration & Automation</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MuleSoft Anypoint</span>
+                            <span class="skill-tag">Microsoft Power Platform</span>
+                            <span class="skill-tag">Microsoft Copilot Studio</span>
+                            <span class="skill-tag">Playwright</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>AI & ML Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">AWS Bedrock Claude</span>
+                            <span class="skill-tag">MCP Server</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Databases & Storage</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Neo4j</span>
+                            <span class="skill-tag">Milvus</span>
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Open Source Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Mlflow</span>
+                            <span class="skill-tag">KAG</span>
+                            <span class="skill-tag">Librechat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-tabs">
+                <button class="project-tab" onclick="openProject('alpha')">Project Alpha</button>
+                <button class="project-tab" onclick="openProject('beta')">Design System</button>
+                <button class="project-tab" onclick="openProject('gamma')">Mobile App</button>
+                <button class="project-tab" onclick="openProject('delta')">Web Platform</button>
+            </div>
+        </section>
+
+
+    </div>
+
+    <div class="container resume-content" id="resume-content" style="display: none;">
+        <section class="resume-header">
+            <h1>Joey Ong (王艺庭)</h1>
+            <p>Data Engineer | 6+ years working with data</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-card">
+                    <div class="timeline-date">Nov 2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Executive / Data Engineer</h3>
+                        <h4>Protosoft Solutions | Toyota Tsusho Asia Pacific</h4>
+                        <ul>
+                            <li>Optimized data infrastructure integrating 5 sources, reducing query time by 93%</li>
+                            <li>Automated 95% of data pipelines for key reporting and dashboarding</li>
+                            <li>Led technical evaluation across 7 vendors for API-led strategy</li>
+                            <li>Pioneered company's first GenAI solution with ~70% positive feedback</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-date">Jul 2021 - Oct 2022</div>
+                    <div class="timeline-content">
+                        <h3>Senior Executive / SQL Data Analyst</h3>
+                        <h4>Mindshare | Unilever</h4>
+                        <ul>
+                            <li>Managed 2TB marketing database across 10 SEA and SA markets</li>
+                            <li>Developed 3 Power BI dashboard modules, automated 90% of workflow</li>
+                            <li>Optimized query processing, reducing time by 70%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-date">Aug 2019 - Jul 2021</div>
+                    <div class="timeline-content">
+                        <h3>Data Engineer</h3>
+                        <h4>ST Engineering Mission & Software Services</h4>
+                        <ul>
+                            <li>Developed network analytics for contact tracing platform (20k users)</li>
+                            <li>Built AI-powered medical analytics with 22% cost reduction potential</li>
+                            <li>Created scalable MLOps pipeline, reducing manual processing by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            <div class="timeline-card">
+                <div class="timeline-date">Aug 2015 - May 2019</div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Engineering, Computer Science</h3>
+                    <h4>Nanyang Technological University</h4>
+                    <p>Specialization: Data Science & Analytics</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Certifications</h2>
+            <div class="timeline-card">
+                <div class="timeline-date">Dec 2024</div>
+                <div class="timeline-content">
+                    <h3><a href="https://academy.langchain.com/certificates/ptzqbfn3wm" target="_blank">Introduction to LangGraph</a></h3>
+                    <h4>LangChain Academy</h4>
+                </div>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-date">Oct 2024</div>
+                <div class="timeline-content">
+                    <h3>Prompt Engineering for ChatGPT</h3>
+                    <h4>Vanderbilt University</h4>
+                </div>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-date">Mar 2021 - Mar 2023</div>
+                <div class="timeline-content">
+                    <h3>Google Professional Machine Learning Engineer</h3>
+                    <h4>Google Cloud</h4>
+                </div>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-date">Jun 2020</div>
+                <div class="timeline-content">
+                    <h3>Neo4j Certified Professional</h3>
+                    <h4>Neo4j</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Languages</h2>
+            <div class="timeline-card">
+                <div class="timeline-content">
+                    <h3>English</h3>
+                    <p>Spoken / Written</p>
+                </div>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-content">
+                    <h3>Mandarin Chinese</h3>
+                    <p>Spoken / Written</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showHome() {
+            const homeContent = document.getElementById('home-content');
+            const resumeContent = document.getElementById('resume-content');
+            
+            resumeContent.style.opacity = '0';
+            setTimeout(() => {
+                resumeContent.style.display = 'none';
+                homeContent.style.display = 'block';
+                homeContent.style.opacity = '1';
+            }, 150);
+            
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.nav-tab')[0].classList.add('active');
+        }
+        
+        function showResume() {
+            const homeContent = document.getElementById('home-content');
+            const resumeContent = document.getElementById('resume-content');
+            
+            homeContent.style.opacity = '0';
+            setTimeout(() => {
+                homeContent.style.display = 'none';
+                resumeContent.style.display = 'block';
+                resumeContent.style.opacity = '1';
+            }, 150);
+            
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.nav-tab')[1].classList.add('active');
+        }
+        
+        function openProject(project) {
+            // Replace with actual project URLs
+            const urls = {
+                alpha: 'https://github.com/yourusername/project-alpha',
+                beta: 'https://github.com/yourusername/design-system',
+                gamma: 'https://github.com/yourusername/mobile-app',
+                delta: 'https://github.com/yourusername/web-platform'
+            };
+            window.open(urls[project], '_blank');
+        }
+        
+        function showSkills(type) {
+            document.querySelectorAll('.skills-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.skills-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(type + '-skills').classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        
+        // Load saved theme and page animations
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+        
+        // Page load animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
